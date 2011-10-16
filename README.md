@@ -10,7 +10,7 @@ Examples
 With the ender bridge:
 
 ``` js
-$('#content').animate({ left: 911, easing: "easeInOut" complete: function () {
+$('#content').animate({ left: 911, easing: "easeInOut", complete: function () {
     console.log('boosh')
   }
 })
