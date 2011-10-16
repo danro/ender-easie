@@ -10,7 +10,7 @@ Examples
 With the ender bridge:
 
 ``` js
-$('#content').animate({ left: 911, easing: "easeInOut", complete: function () {
+$('#content').animate({ left: 911, easing: 'easeInOut', complete: function () {
     console.log('boosh')
   }
 })
@@ -34,7 +34,7 @@ morpheus(elements, {
 
   // API
   , duration: 500
-  , easing: "easeInOutExpo"
+  , easing: 'easeInOutExpo'
   , bezier: [[100, 200], [200, 100]]
   , complete: function () {
       console.log('done')
