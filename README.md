@@ -48,11 +48,8 @@ Easing Shortcuts
 **CSS3 defaults**
 
     ease
-    ease-in
     easeIn
-    ease-out
     easeOut
-    ease-in-out
     easeInOut
 
 **cubic-bezier curves**
