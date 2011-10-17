@@ -42,6 +42,44 @@ morpheus(elements, {
 })
 ```
 
+Easing Shortcuts
+----------------
+
+**CSS3 defaults**
+
+    ease
+    ease-in
+    easeIn
+    ease-out
+    easeOut
+    ease-in-out
+    easeInOut
+
+**cubic-bezier curves**
+
+    easeInCirc
+    easeOutCirc
+    easeInOutCirc
+    easeInCubic
+    easeOutCubic
+    easeInOutCubic
+    easeInExpo
+    easeInOutExpo
+    easeOutExpo
+    easeInQuad
+    easeInOutQuad
+    easeOutQuad
+    easeInQuart
+    easeInOutQuart
+    easeOutQuart
+    easeInQuint
+    easeInOutQuint
+    easeOutQuint
+    easeInSine
+    easeInOutSine
+    easeOutSine
+
+
 Thank yous
 ----------
 
