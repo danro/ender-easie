@@ -1,11 +1,10 @@
-# Easie.js
+# ender.easie.js
 
 A plugin for [Ender](http://ender.no.de/) + [Morpheus](https://github.com/ded/morpheus), adapted from [jquery.easie.js](https://github.com/jaukia/easie).
 
-It gives you CSS3 cubic-bezier easing in javascript, so your javascript tweens can look like CSS and vice-versa.
+Easie gives you CSS3 cubic-bezier easing in javascript, so your javascript tweens can look like CSS and vice-versa. This adaptation plugs easie's functions into `morpheus.easings`.
 
-Examples
---------
+## Examples
 
 With the ender bridge:
 
@@ -16,11 +15,9 @@ $('#content').animate({ left: 911, easing: 'easeInOut', complete: function () {
 })
 ```
 
-Or not:
+Or standalone morpheus:
 
 ``` js
-var morpheus = require("morpheus")
-
 morpheus(elements, {
   // CSS
     left: -50
@@ -42,8 +39,9 @@ morpheus(elements, {
 })
 ```
 
-Easing Shortcuts
-----------------
+## Easing Shortcuts
+
+Accessable via `morpheus.easings`
 
 **CSS3 defaults**
 
@@ -76,11 +74,30 @@ Easing Shortcuts
     easeInOutSine
     easeOutSine
 
+## Thanks
 
-Thank yous
-----------
+* [Janne Aukia](https://github.com/jaukia/)
+* [Dustin Diaz](https://github.com/ded/)
+* [Jacob Thornton](https://github.com/fat/)
 
-  * [Janne Aukia](https://github.com/jaukia/)
-  * [Dustin Diaz](https://github.com/ded/)
-  * [Jacob Thornton](https://github.com/fat/)
+## License
 
+```
+* LICENSE INFORMATION:
+*
+* Copyright (c) 2011 Janne Aukia (janne.aukia.com),
+* Louis-Rémi Babé (public@lrbabe.com).
+* Adapted to Ender/Morpheus by Dan Rogers (danro.net)
+*
+* Dual licensed under the MIT & and GPL Version 2 licenses:
+* http://danro.mit-license.org/
+* https://raw.github.com/danro/ender-easie/master/GPL-LICENSE
+*
+* LICENSE INFORMATION FOR DERIVED FUNCTIONS:
+*
+* Function cubicBezierAtTime is written by Christian Effenberger,
+* and corresponds 1:1 to the WebKit project function.
+* "WebCore and JavaScriptCore are available under the
+* Lesser GNU Public License. WebKit is available under
+* a BSD-style license."
+```

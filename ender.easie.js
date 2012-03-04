@@ -1,31 +1,29 @@
 /*
- * easie.js:
+ * ender.easie.js:
  * https://github.com/danro/ender-easie
  *
- * Version history:
- * 1.0 Initial public version
- *
- * LICENCE INFORMATION:
+ * LICENSE INFORMATION:
  *
  * Copyright (c) 2011 Janne Aukia (janne.aukia.com),
  * Louis-Rémi Babé (public@lrbabe.com).
  * Adapted to Ender/Morpheus by Dan Rogers (danro.net)
  *
- * Dual licensed under the MIT (MIT-LICENSE.txt)
- * and GPL Version 2 (GPL-LICENSE.txt) licenses.
+ * Dual licensed under the MIT & and GPL Version 2 licenses:
+ * http://danro.mit-license.org/
+ * https://raw.github.com/danro/ender-easie/master/GPL-LICENSE
  *
- * LICENCE INFORMATION FOR DERIVED FUNCTIONS:
+ * LICENSE INFORMATION FOR DERIVED FUNCTIONS:
  *
- * Function cubicBezierAtTime is written by Christian Effenberger, 
+ * Function cubicBezierAtTime is written by Christian Effenberger,
  * and corresponds 1:1 to the WebKit project function.
- * "WebCore and JavaScriptCore are available under the 
- * Lesser GNU Public License. WebKit is available under 
+ * "WebCore and JavaScriptCore are available under the
+ * Lesser GNU Public License. WebKit is available under
  * a BSD-style license."
- *
  */
 
-!function ($) {
-	var morpheus = require("morpheus");
+!function (win) {
+	/*global ender */
+	var morpheus = win.morpheus || (ender && require("morpheus")) || {};
 
 	var prefix = "ease"
 	, easeIn = prefix+"In"
@@ -87,12 +85,13 @@
 	easie(1.000, 0.000, 0.000, 1.000, easeInOut+names[5]);
 	easie(0.785, 0.135, 0.150, 0.860, easeInOut+names[6]);
 	
-	// add your custom cubic bezier easings here:
-	// easie(0.785, 0.135, 0.150, 0.860, "myCustomEase1");
+	// add your own custom easings here. check it out: http://easie.danro.net/
+	easie(0.444,0,0,1, "shortInLongOut");
 	
-	// augment morpheus with custom easings
+	// augment morpheus with all easings
 	morpheus.easings = easings;
 
+	// util to build lookups for faster cubic bezier tweening
 	function makeLookup(func,steps) {
 		var i;
 		steps = steps || 101;
@@ -141,4 +140,4 @@
 		return solve(t, solveEpsilon(duration));
 	}
 
-}(ender);
+}(this);
